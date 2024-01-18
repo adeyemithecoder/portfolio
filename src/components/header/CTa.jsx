@@ -1,4 +1,4 @@
-import one from "../../img/Resume.pdf";
+import one from "../../img/Mathew-Adeyemi-Resume.pdf";
 
 const CTa = () => {
   return (

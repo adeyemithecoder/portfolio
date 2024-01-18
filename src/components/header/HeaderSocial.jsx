@@ -1,11 +1,13 @@
 import { BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { FiDribbble } from "react-icons/fi";
 
 const HeaderSocial = () => {
   return (
     <div className='header_social'>
-      <a href='https://linkedin.com' target='_blank'>
+      <a
+        href='https://www.linkedin.com/in/mathew-adeyemi-a0603429b/'
+        target='_blank'
+      >
         {" "}
         <BsLinkedin />{" "}
       </a>

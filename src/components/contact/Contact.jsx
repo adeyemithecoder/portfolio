@@ -3,12 +3,15 @@ import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import emailjs from "emailjs-com";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { CircularProgress } from "@mui/material";
 
 const Contact = () => {
   const form = useRef();
+  const [wait, setWait] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
+    setWait(true);
     emailjs
       .sendForm(
         "service_2h6c6uy",
@@ -18,7 +21,9 @@ const Contact = () => {
       )
       .then(
         (response) => {
+          setWait(false);
           console.log("SUCCESS!", response.status, response.text);
+          alert("Successfullt Sent To Mathew Adeyemi");
         },
         (err) => {
           console.log("FAILED...", err);
@@ -26,6 +31,7 @@ const Contact = () => {
       );
     e.target.reset();
   };
+
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
@@ -72,7 +78,20 @@ const Contact = () => {
             required
             rows='7'
           ></textarea>
-          <button className='btn center btn-primary'>Send Message</button>
+          <button
+            className={
+              wait
+                ? "btn center btn-primary notAllow"
+                : "btn center btn-primary"
+            }
+          >
+            {wait && (
+              <p style={{ width: "100%", textAlign: "center", marginTop: "%" }}>
+                <CircularProgress color='secondary' />
+              </p>
+            )}
+            {!wait && <span>Send Message</span>}
+          </button>
         </form>
       </div>
     </section>
