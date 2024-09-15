@@ -3,117 +3,125 @@ import { BiCheck } from "react-icons/bi";
 
 const Services = () => {
   return (
-    <section id='services'>
+    <section id="services">
       <h5>What i Offer</h5>
       <h2>Services</h2>
-      <div className='container service-contauner'>
-        <article className='service'>
-          <div className='service-head'>
-            <h3>Web App Development</h3>
+      <div className="container service-contauner">
+        <article className="service">
+          <div className="service-head">
+            <h3>Web Application Development</h3>
           </div>
-          <ul className='service-list'>
+          <ul className="service-list">
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                I specialize in developing dynamic and interactive web
-                applications using the MERN stack
+                Building dynamic web apps using the MERN stack with **Next.js**
+                for server-side rendering and API handling.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Custom web application development tailored to your business
-                needs.
+                Custom web solutions optimized for performance and hosted on
+                **Vercel**.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Responsive and user-friendly front-end development with React.
+                Secure backend development with **Node.js**, **Express.js**, and
+                **PostgreSQL**.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
-              <p>Efficient back-end services with Node.js and Express.js</p>
+              <BiCheck size={30} className="service-list-icon" />{" "}
+              <p>
+                Efficient database management using **Prisma** for seamless
+                interaction.
+              </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
-              <p>Seamless database management with MongoDB</p>
+              <BiCheck size={30} className="service-list-icon" />{" "}
+              <p>
+                Scalable deployment on **Vercel** with **PostgreSQL**
+                integration.
+              </p>
             </li>
           </ul>
         </article>
 
-        <article className='service'>
-          <div className='service-head'>
+        <article className="service">
+          <div className="service-head">
             <h3>Full-Stack Development</h3>
           </div>
-          <ul className='service-list'>
+          <ul className="service-list">
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
-              <p>End-to-end solutions for your web development projects.</p>
-            </li>
-            <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                From concept to deployment, I handle both front-end and back-end
-                development.
+                Comprehensive full-stack solutions with front-end development
+                using **React.js** and back-end development with **Node.js** and
+                **Express.js** for building efficient, dynamic applications.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Ensuring a consistent and cohesive user experience across your
-                application.
+                Utilizing **Next.js** for server-side rendering and API routes,
+                enhancing application performance and SEO.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Implementing security measures to protect your data and users.
+                Seamless integration of backend services using **Node.js**,
+                **Express.js**, and database management with **Prisma** and
+                **PostgreSQL**.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
-              <p>Optimizing application performance and scalability.</p>
+              <BiCheck size={30} className="service-list-icon" />{" "}
+              <p>
+                Optimizing applications for security, performance, and
+                scalability across all layers.
+              </p>
             </li>
           </ul>
         </article>
-
-        <article className='service'>
-          <div className='service-head'>
+        <article className="service">
+          <div className="service-head">
             <h3>Consultation and Maintenance</h3>
           </div>
-          <ul className='service-list'>
+          <ul className="service-list">
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Expert guidance in choosing the right technology stack for your
+                Providing expert consultation on technology stack choices,
+                including **React.js**, **Next.js**, **PostgreSQL**, **Prisma**,
+                and **Vercel** for deployment, ensuring the best tools for your
                 project.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Code reviews and optimization to improve your existing
-                applications.
+                Offering strategic advice on system architecture, performance
+                optimization, and scalability for future growth.
               </p>
             </li>
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Regular updates, bug fixes, and maintenance services to keep
-                your app up and running smoothly.
+                Regular maintenance, updates, and proactive troubleshooting to
+                keep your applications secure and running smoothly.
               </p>
             </li>
+
             <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
+              <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Scalability planning and implementation for growing businesses.
+                24/7 support for critical issues, offering fast response times
+                to minimize downtime.
               </p>
-            </li>
-            <li>
-              <BiCheck size={30} className='service-list-icon' />{" "}
-              <p>24/7 support and troubleshooting for critical issues.</p>
             </li>
           </ul>
         </article>
