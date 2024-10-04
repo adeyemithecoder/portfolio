@@ -3,6 +3,7 @@ import img1 from "../../img/w1.png";
 import img2 from "../../img/w2.png";
 import img3 from "../../img/w3.png";
 import img4 from "../../img/result.png";
+import img5 from "../../img/w5.png";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,6 +42,13 @@ const Portfolio = () => {
       title: "Result Manager",
       demo: "https://result-manager.ascodeelevate.com/",
     },
+    {
+      id: 5,
+      img: img5,
+      github: "https://github.com/adeyemithecoder/job-app",
+      title: "Job App",
+      demo: "https://job-app-eta.vercel.app/",
+    },
   ];
   return (
     <section id="portfolio">
@@ -51,7 +59,7 @@ const Portfolio = () => {
         modules={[Pagination, Navigation, Autoplay]}
         navigation={true}
         spaceBetween={40}
-        autoplay={{ delay: 1000 }}
+        autoplay={{ delay: 2000 }}
         pagination={{ clickable: true }}
         slidesPerView={1}
       >

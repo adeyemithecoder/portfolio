@@ -9,42 +9,72 @@ const Services = () => {
       <div className="container service-contauner">
         <article className="service">
           <div className="service-head">
-            <h3>Web Application Development</h3>
+            <h3>Frontend Development</h3>
           </div>
           <ul className="service-list">
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Building dynamic web apps using the MERN stack with **Next.js**
-                for server-side rendering and API handling.
+                Crafting dynamic and responsive user interfaces using
+                **Vue.js**, **React.js**, and **Next.js**, tailored to deliver
+                an optimal user experience across devices.
               </p>
             </li>
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Custom web solutions optimized for performance and hosted on
-                **Vercel**.
+                Leveraging **Next.js** for server-side rendering, static site
+                generation, and enhanced SEO performance.
               </p>
             </li>
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Secure backend development with **Node.js**, **Express.js**, and
-                **PostgreSQL**.
+                Creating scalable, component-based architectures with **Vue.js**
+                and **React.js** to improve maintainability and performance.
               </p>
             </li>
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Efficient database management using **Prisma** for seamless
-                interaction.
+                Ensuring seamless integration with backend services and APIs,
+                enabling rich, interactive web experiences.
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <article className="service">
+          <div className="service-head">
+            <h3>Backend Development</h3>
+          </div>
+          <ul className="service-list">
+            <li>
+              <BiCheck size={30} className="service-list-icon" />{" "}
+              <p>
+                Secure backend development using **Node.js**, **Express.js**,
+                and databases like **PostgreSQL** and **MongoDB**.
               </p>
             </li>
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Scalable deployment on **Vercel** with **PostgreSQL**
-                integration.
+                Building RESTful APIs and GraphQL services for seamless
+                integration with frontend applications.
+              </p>
+            </li>
+            <li>
+              <BiCheck size={30} className="service-list-icon" />{" "}
+              <p>
+                Implementing efficient database management with **Prisma** for
+                SQL databases and **Mongoose** for NoSQL databases.
+              </p>
+            </li>
+            <li>
+              <BiCheck size={30} className="service-list-icon" />{" "}
+              <p>
+                Authentication and authorization using **JWT** and **OAuth** for
+                secure user management.
               </p>
             </li>
           </ul>
@@ -58,35 +88,34 @@ const Services = () => {
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Comprehensive full-stack solutions with front-end development
-                using **React.js** and back-end development with **Node.js** and
-                **Express.js** for building efficient, dynamic applications.
+                Comprehensive full-stack solutions with **Vue.js** for frontend
+                and **Node.js** with **Express.js** for backend development.
               </p>
             </li>
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Utilizing **Next.js** for server-side rendering and API routes,
-                enhancing application performance and SEO.
+                Server-side rendering using **Nuxt.js** to enhance performance,
+                SEO, and seamless frontend-backend integration.
               </p>
             </li>
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Seamless integration of backend services using **Node.js**,
-                **Express.js**, and database management with **Prisma** and
-                **PostgreSQL**.
+                Optimized full-stack applications, ensuring security,
+                performance, and scalability across all layers.
               </p>
             </li>
             <li>
               <BiCheck size={30} className="service-list-icon" />{" "}
               <p>
-                Optimizing applications for security, performance, and
-                scalability across all layers.
+                Integration of **PostgreSQL** and **MongoDB** for efficient data
+                storage and retrieval.
               </p>
             </li>
           </ul>
         </article>
+
         <article className="service">
           <div className="service-head">
             <h3>Consultation and Maintenance</h3>
