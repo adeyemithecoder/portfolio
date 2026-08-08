@@ -1,0 +1,130 @@
+import { companies } from "./companies";
+
+// All entries below are taken directly from Mathew's resume.
+// Nothing here is invented — edit copy freely, but keep dates/titles accurate.
+
+export const experience = [
+  {
+    id: "td4pai",
+    company: companies.td4pai.name,
+    logo: companies.td4pai.logo,
+    role: "Full-Stack Software Engineer | Cloud & DevOps",
+    period: "Sep 2025 – Present",
+    location: "Remote & On-Site",
+    projectLabel: "Project: DAQBIN Embedded Devices Dashboard",
+    projectLinks: [
+      { label: "enugu.daqbin.ng", url: "https://enugu.daqbin.ng" },
+      { label: "lagos.daqbin.ng", url: "https://lagos.daqbin.ng" },
+    ],
+    summary:
+      "Built full-stack dashboards visualizing real-time embedded device data, and owned the production infrastructure that serves them.",
+    responsibilities: [
+      "Built full-stack dashboards visualizing real-time embedded/IoT device data, working across frontend, backend, and database layers to serve live system status to end users.",
+      "Set up and administered Linux (Ubuntu) production servers, preparing infrastructure and hardening environments for live deployment.",
+      "Containerized full-stack applications with Docker and Docker Compose, configuring container networking for multi-service deployments.",
+      "Configured Nginx as a reverse proxy in front of Node.js applications to manage production traffic routing.",
+      "Connected production servers directly to GitHub repositories, cloning and deploying projects straight into Docker containers as part of the release workflow.",
+      "Built CI/CD pipelines with GitHub Actions to automate build and deployment steps.",
+      "Deployed and managed application infrastructure on AWS, alongside MySQL, MongoDB, PostgreSQL, and Redis database services.",
+      "Diagnosed and resolved issues spanning frontend, backend, Docker, networking, and server configuration in a live production environment.",
+      "Partnered with embedded engineers to align frontend data visualizations with firmware output, integrating device data into responsive dashboards.",
+    ],
+    technologies: [
+      "React",
+      "Node.js",
+      "Docker",
+      "Docker Compose",
+      "Nginx",
+      "AWS",
+      "GitHub Actions",
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "Linux",
+    ],
+    relatedProjects: ["daqbin-embedded-dashboard"],
+  },
+  {
+    id: "elevate-solution",
+    company: companies.elevateSolution.name,
+    logo: companies.elevateSolution.logo,
+    role: "Full Stack Developer (Contract)",
+    period: "Apr 2024 – Present",
+    location: "Remote",
+    projectLabel: "Projects: CBT Platform, Accounting Module, Result Manager",
+    projectLinks: [
+      { label: "cbt.ascodeelevate.com", url: "https://cbt.ascodeelevate.com" },
+      { label: "acct.ascodeelevate.com", url: "https://acct.ascodeelevate.com" },
+      { label: "resultmanager.ascodeelevate.com", url: "https://resultmanager.ascodeelevate.com" },
+    ],
+    summary:
+      "Built a multi-tenant school management SaaS suite used by multiple schools from a single codebase.",
+    responsibilities: [
+      "Built a multi-tenant school management SaaS suite used by multiple schools from a single codebase — not a one-off single-school build — covering result processing, attendance, and an accounting/fees management module, using Node.js/Express REST APIs with Socket.io for real-time features.",
+      "Built the mobile client with React Native and Redux Toolkit for optimized state management across the app.",
+      "Integrated payment gateways including Paystack, Flutterwave, and Squad (GTBank) for payment and transaction workflows.",
+      "Designed and optimized multi-tenant database schemas to improve query performance and data integrity across schools.",
+      "Coordinated deployment of new features to Vercel with a fully remote cross-functional team.",
+    ],
+    technologies: [
+      "Node.js",
+      "Express",
+      "Socket.io",
+      "React Native",
+      "Redux Toolkit",
+      "MongoDB",
+      "Prisma",
+      "Paystack",
+      "Flutterwave",
+      "Squad",
+      "Vercel",
+    ],
+    relatedProjects: ["cbt-platform", "result-manager"],
+  },
+  {
+    id: "splantom",
+    company: companies.splantom.name,
+    logo: companies.splantom.logo,
+    role: "Mobile App Full Stack Developer (Contract)",
+    period: "Feb 2025 – Jun 2025",
+    location: "Remote",
+    projectLabel: "App: petrolapp (Google Play)",
+    projectLinks: [], // [ADD Google Play link]
+    summary:
+      "Developed and maintained petrolapp, a production React Native mobile application shipped to the Google Play Store.",
+    responsibilities: [
+      "Developed and maintained petrolapp, a production React Native mobile application, integrating Firebase Functions, Node.js, and Express.js backend services.",
+      "Implemented Firebase Authentication, Firestore, and Cloud Messaging for real-time app functionality, with JWT-based authentication and MongoDB for data storage.",
+      "Shipped the application to the Google Play Store and collaborated with cross-functional teams on feature design and delivery.",
+    ],
+    technologies: [
+      "React Native",
+      "Firebase",
+      "Node.js",
+      "Express",
+      "JWT",
+      "MongoDB",
+    ],
+    relatedProjects: ["petrolapp"],
+  },
+  {
+    id: "torbita",
+    company: companies.torbita.name,
+    logo: companies.torbita.logo,
+    role: "Full Stack Developer & Online Instructor",
+    period: "Jan 2024 – Jul 2025",
+    location: "Abuja",
+    projectLabel: null,
+    projectLinks: [],
+    summary:
+      "Delivered hands-on full-stack instruction while building React Native applications used in the training curriculum.",
+    responsibilities: [
+      "Delivered hands-on instruction in React.js, React Native, Node.js, and MongoDB to secondary school students and adult learners, in person and online.",
+      "Built React Native mobile applications used as part of the training curriculum to reinforce practical, project-based learning.",
+      "Authored instructor guides and structured training curricula to support consistent, project-based delivery across cohorts.",
+    ],
+    technologies: ["React.js", "React Native", "Node.js", "MongoDB"],
+    relatedProjects: [],
+  },
+];
