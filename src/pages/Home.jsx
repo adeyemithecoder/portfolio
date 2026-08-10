@@ -20,7 +20,7 @@ import { articles } from "../data/articles";
 import { skills } from "../data/skills";
 
 const RESUME_PATH = "/src/assets/resume/Mathew_Adeyemi_Resume.pdf";
-const PROFILE_PHOTO = "/src/assets/images/profile/profile-photo.png";
+const PROFILE_PHOTO = "/images/profile/profile-photo.png";
 
 const SNAPSHOT = [
   {

@@ -9,7 +9,7 @@ export const projects = [
     company: "TD4PAI Hardtech Hub",
     category: "Full-Stack / Cloud",
     featured: true,
-    image: "/src/assets/images/projects/daqbin-embedded/cover.png",
+    image: "/images/projects/daqbin-embedded/cover.png",
     gallery: [],
     shortDescription:
       "Real-time dashboards for monitoring embedded devices across multiple deployment locations, supported by production infrastructure built and maintained end-to-end.",
@@ -110,7 +110,7 @@ export const projects = [
     company: "AS Code Elevate Solution",
     category: "Full-Stack / SaaS",
     featured: true,
-    image: "/src/assets/images/projects/cbt-platform/cover.png",
+    image: "/images/projects/cbt-platform/cover.png",
     gallery: [],
 
     shortDescription:
@@ -229,7 +229,7 @@ export const projects = [
     company: "AS Code Elevate Solution Limited",
     category: "Full-Stack / SaaS",
     featured: false,
-    image: "/src/assets/images/projects/result-manager/cover.png",
+    image: "/images/projects/result-manager/cover.png",
     gallery: [],
 
     shortDescription:
@@ -329,7 +329,7 @@ export const projects = [
     company: "AS Code Elevate Solution Limited",
     category: "Full-Stack / SaaS",
     featured: false,
-    image: "/src/assets/images/projects/accounting-system/cover.png",
+    image: "/images/projects/accounting-system/cover.png",
     gallery: [],
 
     shortDescription:
@@ -429,7 +429,7 @@ export const projects = [
     company: "Splantom Technology",
     category: "Mobile",
     featured: true,
-    image: "/src/assets/images/projects/petrolapp/cover.png",
+    image: "/images/projects/petrolapp/cover.png",
     gallery: [],
 
     shortDescription:
