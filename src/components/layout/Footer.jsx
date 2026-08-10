@@ -1,11 +1,15 @@
 import { FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi";
 
-const RESUME_PATH = "/src/assets/resume/Mathew_Adeyemi_Resume.pdf";
+const RESUME_PATH = "/resume/Mathew_Adeyemi_Resume.pdf";
 
 // [ADD REAL GITHUB URL] — resume doesn't list one; update once available.
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/", icon: FiGithub },
-  { label: "LinkedIn", href: "https://linkedin.com/in/mathew-adeyemi-a0603429b", icon: FiLinkedin },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/mathew-adeyemi-a0603429b",
+    icon: FiLinkedin,
+  },
   { label: "Email", href: "mailto:mathewadeyemi7654@gmail.com", icon: FiMail },
 ];
 
@@ -16,9 +20,12 @@ export default function Footer() {
     <footer className="border-t border-[var(--color-border)] mt-24">
       <div className="container py-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
         <div>
-          <p className="font-display text-lg font-semibold text-[var(--color-white)]">Mathew Adeyemi</p>
+          <p className="font-display text-lg font-semibold text-[var(--color-white)]">
+            Mathew Adeyemi
+          </p>
           <p className="mt-1 text-sm text-[var(--color-light)]">
-            Full-Stack Software Engineer — Frontend • Backend • Cloud &amp; DevOps
+            Full-Stack Software Engineer — Frontend • Backend • Cloud &amp;
+            DevOps
           </p>
         </div>
 
