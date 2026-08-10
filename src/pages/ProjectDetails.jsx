@@ -17,16 +17,27 @@ export default function ProjectDetails() {
 
   if (!project) return <Navigate to="/#projects" replace />;
 
-  const related = projects.filter((p) => project.relatedProjects?.includes(p.slug) || false);
+  const related = projects.filter(
+    (p) => project.relatedProjects?.includes(p.slug) || false,
+  );
   // Fallback: show other projects if none explicitly related
   const relatedToShow = related.length
     ? related
-    : projects.filter((p) => p.slug !== project.slug && p.category === project.category).slice(0, 2);
+    : projects
+        .filter(
+          (p) => p.slug !== project.slug && p.category === project.category,
+        )
+        .slice(0, 2);
 
   const gallery = project.gallery?.length ? project.gallery : [project.image];
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <Seo title={project.title} description={project.shortDescription} />
       {/* Project Hero */}
       <section className="container pt-16 pb-10">
@@ -40,9 +51,15 @@ export default function ProjectDetails() {
         <span className="text-xs font-medium uppercase tracking-wide text-[var(--color-primary)]">
           {project.category}
         </span>
-        <h1 className="mt-2 text-3xl md:text-5xl font-semibold text-[var(--color-white)]">{project.title}</h1>
-        {project.company && <p className="mt-2 text-[var(--color-light)]">{project.company}</p>}
-        <p className="mt-1 text-sm text-[var(--color-light)]">Role: {project.myRole}</p>
+        <h1 className="mt-2 text-3xl md:text-5xl font-semibold text-[var(--color-white)]">
+          {project.title}
+        </h1>
+        {project.company && (
+          <p className="mt-2 text-[var(--color-light)]">{project.company}</p>
+        )}
+        <p className="mt-1 text-sm text-[var(--color-light)]">
+          Role: {project.myRole}
+        </p>
 
         <div className="mt-6 flex flex-wrap gap-2">
           {project.technologies.map((tech) => (
@@ -67,28 +84,34 @@ export default function ProjectDetails() {
       {/* Project image / gallery */}
       <section className="container pb-16">
         {gallery.length > 1 ? (
-          <Swiper spaceBetween={16} slidesPerView={1} className="rounded-2xl overflow-hidden border border-[var(--color-border)]">
+          <Swiper
+            spaceBetween={16}
+            slidesPerView={1}
+            className="rounded-2xl overflow-hidden border border-[var(--color-border)]"
+          >
             {gallery.map((src, i) => (
               <SwiperSlide key={i}>
-                <img
-                  src={src}
-                  alt={`${project.title} screenshot ${i + 1}`}
-                  className="w-full aspect-video object-cover"
-                  loading="lazy"
-                />
+                <div className="w-full flex items-center justify-center bg-white/5">
+                  <img
+                    src={src}
+                    alt={`${project.title} screenshot ${i + 1}`}
+                    className="w-full h-auto max-h-[700px] object-contain"
+                    loading="lazy"
+                  />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
         ) : (
-          <div className="rounded-2xl overflow-hidden border border-[var(--color-border)] aspect-video bg-white/5">
+          <div className="rounded-2xl overflow-hidden border border-[var(--color-border)] bg-white/5 flex items-center justify-center">
             <img
               src={project.image}
               alt={`${project.title} screenshot`}
-              className="w-full h-full object-cover"
+              className="w-full h-auto max-h-[700px] object-contain"
               loading="lazy"
               onError={(e) => {
                 e.currentTarget.parentElement.innerHTML =
-                  '<div class="h-full w-full flex items-center justify-center text-sm text-[var(--color-light)]">[ADD PROJECT SCREENSHOT]</div>';
+                  '<div class="min-h-[300px] w-full flex items-center justify-center text-sm text-[var(--color-light)]">Project screenshot unavailable</div>';
               }}
             />
           </div>
@@ -100,7 +123,9 @@ export default function ProjectDetails() {
         <div className="space-y-16">
           {project.overview && (
             <section>
-              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">Overview</h2>
+              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">
+                Overview
+              </h2>
               <p className="text-[var(--color-light)]">{project.overview}</p>
             </section>
           )}
@@ -109,14 +134,20 @@ export default function ProjectDetails() {
             <section className="grid sm:grid-cols-2 gap-8">
               {project.problem && (
                 <div>
-                  <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">Problem</h2>
+                  <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">
+                    Problem
+                  </h2>
                   <p className="text-[var(--color-light)]">{project.problem}</p>
                 </div>
               )}
               {project.solution && (
                 <div>
-                  <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">Solution</h2>
-                  <p className="text-[var(--color-light)]">{project.solution}</p>
+                  <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">
+                    Solution
+                  </h2>
+                  <p className="text-[var(--color-light)]">
+                    {project.solution}
+                  </p>
                 </div>
               )}
             </section>
@@ -124,7 +155,9 @@ export default function ProjectDetails() {
 
           {project.keyFeatures?.length > 0 && (
             <section>
-              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-4">Key Features</h2>
+              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-4">
+                Key Features
+              </h2>
               <ul className="space-y-3">
                 {project.keyFeatures.map((f, i) => (
                   <li key={i} className="flex gap-3 text-[var(--color-light)]">
@@ -138,21 +171,38 @@ export default function ProjectDetails() {
 
           {project.challenges?.length > 0 && (
             <section>
-              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-4">Engineering Challenges</h2>
+              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-4">
+                Engineering Challenges
+              </h2>
               <div className="space-y-6">
                 {project.challenges.map((c, i) => (
-                  <div key={i} className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] p-6">
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] p-6"
+                  >
                     <p className="text-sm">
-                      <span className="font-semibold text-[var(--color-primary)]">Challenge: </span>
-                      <span className="text-[var(--color-light)]">{c.challenge}</span>
+                      <span className="font-semibold text-[var(--color-primary)]">
+                        Challenge:{" "}
+                      </span>
+                      <span className="text-[var(--color-light)]">
+                        {c.challenge}
+                      </span>
                     </p>
                     <p className="text-sm mt-3">
-                      <span className="font-semibold text-[var(--color-primary)]">Approach: </span>
-                      <span className="text-[var(--color-light)]">{c.approach}</span>
+                      <span className="font-semibold text-[var(--color-primary)]">
+                        Approach:{" "}
+                      </span>
+                      <span className="text-[var(--color-light)]">
+                        {c.approach}
+                      </span>
                     </p>
                     <p className="text-sm mt-3">
-                      <span className="font-semibold text-[var(--color-primary)]">Solution: </span>
-                      <span className="text-[var(--color-light)]">{c.solution}</span>
+                      <span className="font-semibold text-[var(--color-primary)]">
+                        Solution:{" "}
+                      </span>
+                      <span className="text-[var(--color-light)]">
+                        {c.solution}
+                      </span>
                     </p>
                   </div>
                 ))}
@@ -162,7 +212,9 @@ export default function ProjectDetails() {
 
           {project.results && (
             <section>
-              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">Results / Impact</h2>
+              <h2 className="text-xl font-semibold text-[var(--color-white)] mb-3">
+                Results / Impact
+              </h2>
               <p className="text-[var(--color-light)]">{project.results}</p>
             </section>
           )}
@@ -172,14 +224,18 @@ export default function ProjectDetails() {
         <aside className="space-y-10">
           {project.architecture?.length > 0 && (
             <div>
-              <h2 className="text-lg font-semibold text-[var(--color-white)] mb-5">Architecture</h2>
+              <h2 className="text-lg font-semibold text-[var(--color-white)] mb-5">
+                Architecture
+              </h2>
               <ArchitectureDiagram steps={project.architecture} />
             </div>
           )}
 
           {relatedToShow.length > 0 && (
             <div>
-              <h2 className="text-lg font-semibold text-[var(--color-white)] mb-4">Related Projects</h2>
+              <h2 className="text-lg font-semibold text-[var(--color-white)] mb-4">
+                Related Projects
+              </h2>
               <div className="space-y-3">
                 {relatedToShow.map((p) => (
                   <Link
@@ -187,8 +243,12 @@ export default function ProjectDetails() {
                     to={`/projects/${p.slug}`}
                     className="block rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-4 hover:border-[var(--color-primary)]/50 transition-colors"
                   >
-                    <p className="text-sm font-medium text-[var(--color-white)]">{p.title}</p>
-                    <p className="text-xs text-[var(--color-light)] mt-1">{p.category}</p>
+                    <p className="text-sm font-medium text-[var(--color-white)]">
+                      {p.title}
+                    </p>
+                    <p className="text-xs text-[var(--color-light)] mt-1">
+                      {p.category}
+                    </p>
                   </Link>
                 ))}
               </div>
