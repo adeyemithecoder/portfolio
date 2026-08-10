@@ -43,7 +43,7 @@ export default function ProjectDetails() {
       <section className="container pt-16 pb-10">
         <Link
           to="/#projects"
-          className="inline-flex items-center gap-2 text-sm text-[var(--color-light)] hover:text-[var(--color-white)] mb-6"
+          className="inline-flex items-center gap-2 mr-2 text-sm text-[var(--color-light)] hover:text-[var(--color-white)] mb-6"
         >
           <FiArrowLeft aria-hidden="true" /> Back to Projects
         </Link>

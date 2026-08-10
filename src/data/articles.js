@@ -10,7 +10,6 @@ export const articles = [
       "A walk through the GitHub Actions pipeline that kicks off the moment a commit lands — build, test, and deploy steps, and what actually triggers each one.",
     category: "CI/CD & Deployment",
     date: "2026-08-08", // [CONFIRM/UPDATE DATE]
-    readingTime: "6 min read",
     tags: ["GitHub Actions", "CI/CD", "Deployment"],
     published: true,
     content: `When I run \`git push\`, the code leaving my machine is really just the first step in a much longer chain — and for a long time I didn't think much about what happened after that. Here's the version of that chain I actually rely on day to day.
@@ -35,7 +34,6 @@ The part I had to unlearn was treating \`git push\` as the finish line. It's rea
       "Why I moved from mapping container ports straight to the host to routing everything through Nginx instead — and what that changes about how a server gets attacked.",
     category: "Cloud & DevOps",
     date: "2026-08-08", // [CONFIRM/UPDATE DATE]
-    readingTime: "5 min read",
     tags: ["Docker", "Nginx", "Security"],
     published: true,
     content: `Early on, my Docker Compose files looked something like \`ports: ["3000:3000"]\` and I called it done. The app was reachable, the demo worked, and I moved on. It took running a few things in actual production to understand why that pattern doesn't hold up.
@@ -57,7 +55,6 @@ None of this was really about a specific incident — it was realizing that "it'
       "The rollout pattern I use to bring a new container version online and swap Nginx's upstream to it, without ever dropping an in-flight request.",
     category: "Cloud & DevOps",
     date: "2026-08-08", // [CONFIRM/UPDATE DATE]
-    readingTime: "5 min read",
     tags: ["Docker", "Nginx", "CI/CD"],
     published: true,
     content: `Restarting a container to deploy a new version has an obvious problem: for however many seconds it takes the new process to boot, there's nothing listening, and any request that lands in that window just fails. For a demo, that's fine. For anything with real traffic, it isn't.
@@ -77,7 +74,6 @@ This isn't a fully automated blue-green setup — I don't have a load balancer d
       "What I'd do differently — and what held up — after building a multi-tenant school management platform serving several schools from one codebase.",
     category: "Backend & Architecture",
     date: "2026-08-08", // [CONFIRM/UPDATE DATE]
-    readingTime: "7 min read",
     tags: ["Multi-Tenancy", "MySQL", "System Design"],
     published: true,
     content: `The core decision in any multi-tenant system is where tenant isolation actually lives, and I went with the approach that's most common for this scale: a shared database with a \`tenant_id\` (or \`school_id\`) column on every tenant-owned table, rather than a separate database per tenant. It's cheaper to operate, easier to run migrations against once instead of N times, and simpler to reason about — as long as the isolation is enforced consistently.
@@ -97,7 +93,6 @@ The tradeoff I'd flag honestly: shared-schema multi-tenancy makes a certain clas
       "The checklist I actually follow the first hour on a fresh Ubuntu box — users, firewall, Docker, and the handful of things I've learned not to skip.",
     category: "Cloud & DevOps",
     date: "2026-08-08", // [CONFIRM/UPDATE DATE]
-    readingTime: "6 min read",
     tags: ["Linux", "Server Administration", "AWS"],
     published: true,
     content: `Every fresh Ubuntu server — whether it's an AWS EC2 instance or anything else — starts from the same short checklist for me now, mostly built from things I skipped once and regretted.

@@ -15,23 +15,40 @@ export default function ArticleCard({ article }) {
         {article.category}
       </span>
 
+      {/* Title */}
       <h3 className="mt-2 text-lg font-semibold text-[var(--color-white)]">
-        <Link to={`/writing/${article.slug}`} className="hover:text-[var(--color-primary)] transition-colors">
+        <Link
+          to={`/writing/${article.slug}`}
+          className="hover:text-[var(--color-primary)] transition-colors"
+        >
           {article.title}
         </Link>
       </h3>
 
-      <p className="mt-3 text-sm text-[var(--color-light)] flex-1">{article.excerpt}</p>
+      {/* Excerpt */}
+      <p className="mt-3 text-sm text-[var(--color-light)] flex-1">
+        {article.excerpt}
+      </p>
 
+      {/* Tags */}
       <div className="mt-4 flex flex-wrap gap-2">
         {article.tags.map((tag) => (
           <Badge key={tag}>{tag}</Badge>
         ))}
       </div>
 
-      <div className="mt-5 flex items-center justify-between text-xs text-[var(--color-light)]">
-        <span>{article.date ?? "Draft — not yet published"}</span>
-        <span>{article.readingTime ?? ""}</span>
+      {/* Date + Read More */}
+      <div className="mt-5 flex items-center justify-between gap-4">
+        <span className="text-xs text-[var(--color-light)]">
+          {article.date ?? "Draft — not yet published"}
+        </span>
+
+        <Link
+          to={`/writing/${article.slug}`}
+          className="shrink-0 rounded-full border border-[var(--color-primary)] px-4 py-2 text-xs font-medium text-[var(--color-primary)] transition-all hover:bg-[var(--color-primary)] hover:text-[var(--color-bg)]"
+        >
+          Read More
+        </Link>
       </div>
     </motion.article>
   );

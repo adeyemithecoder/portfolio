@@ -18,6 +18,7 @@ import { projects } from "../data/projects";
 import { experience } from "../data/experience";
 import { articles } from "../data/articles";
 import { skills } from "../data/skills";
+import { FaWhatsapp } from "react-icons/fa";
 
 const RESUME_PATH = "/resume/Mathew_Adeyemi_Resume.pdf";
 const PROFILE_PHOTO = "/images/profile/profile-photo.png";
@@ -572,6 +573,20 @@ export default function Home() {
               />
               <span className="text-sm text-[var(--color-light)]">
                 https://github.com/adeyemithecoder/
+              </span>
+            </a>
+            <a
+              href="https://wa.me/2348109774285"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-4 hover:border-[var(--color-primary)]/50 transition-colors"
+            >
+              <FaWhatsapp
+                className="text-xl text-[var(--color-primary)]"
+                aria-hidden="true"
+              />
+              <span className="text-sm text-[var(--color-light)]">
+                WhatsApp
               </span>
             </a>
           </div>

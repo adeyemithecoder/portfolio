@@ -12,12 +12,17 @@ export default function ArticleDetails() {
   if (!article) return <Navigate to="/#writing" replace />;
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
       <Seo title={article.title} description={article.excerpt} />
       <article className="container pt-16 pb-28 max-w-3xl">
         <Link
           to="/#writing"
-          className="inline-flex items-center gap-2 text-sm text-[var(--color-light)] hover:text-[var(--color-white)] mb-8"
+          className="inline-flex items-center gap-2 text-sm text-[var(--color-light)]  mr-2 hover:text-[var(--color-white)] mb-8"
         >
           <FiArrowLeft aria-hidden="true" /> Back to Writing
         </Link>
@@ -25,7 +30,9 @@ export default function ArticleDetails() {
         <span className="text-xs font-medium uppercase tracking-wide text-[var(--color-primary)]">
           {article.category}
         </span>
-        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-[var(--color-white)]">{article.title}</h1>
+        <h1 className="mt-2 text-3xl md:text-4xl font-semibold text-[var(--color-white)]">
+          {article.title}
+        </h1>
 
         <div className="mt-4 flex items-center gap-4 text-sm text-[var(--color-light)]">
           <span>{article.date ?? "Draft — not yet published"}</span>

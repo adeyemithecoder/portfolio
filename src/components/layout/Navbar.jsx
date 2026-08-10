@@ -147,7 +147,7 @@ export default function Navbar() {
           MAIN NAVBAR
       ========================================================== */}
       <header
-        className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-300 ${
+        className={`sticky top-0 z-[100] w-full transition-all duration-300 ${
           scrolled
             ? "bg-[var(--color-bg)]/95 backdrop-blur-md border-b border-[var(--color-border)] shadow-lg"
             : "bg-[var(--color-bg)]/90 backdrop-blur-sm"
