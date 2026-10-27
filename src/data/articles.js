@@ -109,6 +109,93 @@ The last step is monitoring basics — disk space and memory alerts, even someth
 
 None of this is exotic. It's the boring, repeatable first hour that means the next six months on that server are boring too.`,
   },
+
+  {
+    slug: "stop-storing-sensitive-credentials-in-localstorage",
+    title: "Stop Storing Sensitive Credentials in localStorage",
+    excerpt:
+      "Why storing authentication tokens in localStorage can expose users to account theft, and what JavaScript developers should use instead.",
+    category: "Web Security",
+    date: "2026-10-27",
+    tags: ["JavaScript", "Web Security", "Authentication", "JWT", "OWASP"],
+    published: true,
+    content: `As developers, it is easy to focus on making authentication work without thinking carefully about where credentials are stored. But functionality alone is not enough. We also need to protect the users who trust our applications.
+
+One common mistake is storing sensitive authentication credentials in localStorage.
+
+## What Should You Avoid Storing in localStorage?
+
+Avoid storing sensitive credentials such as:
+
+- Access tokens
+- Refresh tokens
+- JWTs (JSON Web Tokens)
+- API keys and other secrets
+- Sensitive personal information that does not need to persist in browser storage
+
+The problem is that JavaScript running on your page can access localStorage. If your application has a Cross-Site Scripting (XSS) vulnerability, malicious JavaScript may be able to read stored tokens and send them to an attacker. Depending on the token's privileges and expiration, this could allow the attacker to access the user's account.
+
+## Where Should You Store Authentication Credentials Instead?
+
+The right approach depends on your application's architecture.
+
+### 1. HttpOnly, Secure Cookies
+
+For many browser-based applications, HttpOnly cookies are a good option for session identifiers or refresh tokens.
+
+An HttpOnly cookie cannot be read directly through JavaScript. The browser manages the cookie and automatically sends it with eligible requests to the server.
+
+For example, a Node.js and Express backend can set a cookie like this:
+
+\`\`\`javascript
+res.cookie("sessionId", sessionId, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "lax",
+  path: "/",
+  maxAge: 60 * 60 * 1000,
+});
+\`\`\`
+
+The \`httpOnly\` option prevents JavaScript from reading the cookie, while \`secure\` ensures the cookie is sent only over HTTPS. The \`sameSite\` setting helps control when cookies are sent in cross-site requests.
+
+Cookies do not eliminate every security risk. You still need proper session validation, expiration, logout handling, CSRF protection where applicable, and protection against XSS.
+
+### 2. In-Memory Storage
+
+Another option is keeping a short-lived access token in JavaScript memory rather than persistent browser storage.
+
+In a React application, this might mean using component state, React Context, or a state-management store.
+
+The token is lost when the application reloads or its in-memory state is reset. However, JavaScript can still access the token while it exists, so in-memory storage does not prevent token theft through XSS.
+
+### 3. Environment Variables and Secrets Managers
+
+Never put private server credentials directly into frontend code.
+
+Database passwords, private API keys, and other server secrets should remain on the server, where they can be managed using environment variables or a dedicated secrets manager.
+
+Remember that frontend environment variables may be included in the public application bundle. A variable is not secret simply because it comes from an environment file.
+
+## What About localStorage?
+
+localStorage is still useful for non-sensitive preferences, including:
+
+- Theme preferences, such as light or dark mode
+- Language preferences
+- Other non-sensitive UI settings
+
+The important distinction is between ordinary application preferences and credentials that grant access to protected resources.
+
+## Final Thoughts
+
+Secure authentication is not just about generating a JWT or successfully logging a user in. It is also about how credentials are stored, transmitted, refreshed, and revoked.
+
+As JavaScript developers, we should make security part of our architecture from the beginning instead of treating it as an afterthought.
+
+Build securely. Protect your users.
+`,
+  },
 ];
 
 export const getPublishedArticles = () => articles.filter((a) => a.published);

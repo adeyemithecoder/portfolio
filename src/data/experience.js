@@ -50,13 +50,19 @@ export const experience = [
     company: companies.elevateSolution.name,
     logo: companies.elevateSolution.logo,
     role: "Full Stack Developer (Contract)",
-    period: "Apr 2024 – Present",
+    period: "Apr 2024 – Oct 2026",
     location: "Remote",
     projectLabel: "Projects: CBT Platform, Accounting Module, Result Manager",
     projectLinks: [
       { label: "cbt.ascodeelevate.com", url: "https://cbt.ascodeelevate.com" },
-      { label: "acct.ascodeelevate.com", url: "https://acct.ascodeelevate.com" },
-      { label: "resultmanager.ascodeelevate.com", url: "https://resultmanager.ascodeelevate.com" },
+      {
+        label: "acct.ascodeelevate.com",
+        url: "https://acct.ascodeelevate.com",
+      },
+      {
+        label: "resultmanager.ascodeelevate.com",
+        url: "https://resultmanager.ascodeelevate.com",
+      },
     ],
     summary:
       "Built a multi-tenant school management SaaS suite used by multiple schools from a single codebase.",
